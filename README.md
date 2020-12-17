@@ -1,6 +1,6 @@
-# gatsby-plugin-reddit
+# gatsby-plugin-hn
 
-Loads the reddit JavaScript for embedding reddit's post.
+Loads the hacker news JavaScript for embedding hn's post.
 
 ## Inspiration
 
@@ -9,18 +9,21 @@ Loads the reddit JavaScript for embedding reddit's post.
 ## Install
 
 ```shell
-npm install gatsby-plugin-reddit
+npm install gatsby-plugin-hn
 ```
 
 ## Configure
 
 ```javascript
 // In your gatsby-config.js
-plugins: [`gatsby-plugin-reddit`];
+plugins: [`gatsby-plugin-hn`];
 ```
 
 ## How to Use
 
-1. Get embed code by <https://www.reddit.com/wiki/embeds>
-2. Take the code you're given and copy it into your markdown page.
-   > Note: when copying the embed code, copy **only** the blockquote section and not the script.
+1. Put the following code to your component:
+
+```html
+<div class="hn-card" data-id="25426185">
+</div>
+```

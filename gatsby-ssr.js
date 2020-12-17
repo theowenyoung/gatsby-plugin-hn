@@ -8,20 +8,11 @@ exports.onRenderBody = void 0;
 var _react = _interopRequireDefault(require("react"));
 
 var onRenderBody = function onRenderBody(_ref) {
-  var setHeadComponents = _ref.setHeadComponents,
-      setPostBodyComponents = _ref.setPostBodyComponents;
+  var setHeadComponents = _ref.setHeadComponents;
   setHeadComponents([/*#__PURE__*/_react.default.createElement("link", {
-    key: "gatsby-plugin-reddit-preconnect-0",
+    key: "gatsby-plugin-hn-preconnect-0",
     rel: "preconnect",
-    href: "https://embed.redditmedia.com"
-  }), /*#__PURE__*/_react.default.createElement("link", {
-    key: "gatsby-plugin-reddit-preconnect-1",
-    rel: "preconnect",
-    href: "https://www.reddit.com"
-  }), /*#__PURE__*/_react.default.createElement("link", {
-    key: "gatsby-plugin-reddit-preconnect-2",
-    rel: "preconnect",
-    href: "https://www.redditstatic.com"
+    href: "https://hn.algolia.com"
   })]);
 };
 

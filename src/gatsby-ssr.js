@@ -1,21 +1,11 @@
 import React from "react";
 
-export const onRenderBody = ({ setHeadComponents, setPostBodyComponents }) => {
+export const onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
     <link
-      key="gatsby-plugin-reddit-preconnect-0"
+      key="gatsby-plugin-hn-preconnect-0"
       rel="preconnect"
-      href="https://embed.redditmedia.com"
-    />,
-    <link
-      key="gatsby-plugin-reddit-preconnect-1"
-      rel="preconnect"
-      href="https://www.reddit.com"
-    />,
-    <link
-      key="gatsby-plugin-reddit-preconnect-2"
-      rel="preconnect"
-      href="https://www.redditstatic.com"
+      href="https://hn.algolia.com"
     />,
   ]);
 };

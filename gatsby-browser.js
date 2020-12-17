@@ -3,14 +3,14 @@
 var injectScript = function injectScript() {
   var js = document.createElement("script");
   var firstScript = document.getElementsByTagName("script")[0];
-  js.id = "gatsby-plugin-reddit";
-  js.src = "//embed.redditmedia.com/widgets/platform.js";
+  js.id = "gatsby-plugin-hn";
+  js.src = "//cdn.jsdelivr.net/gh/theowenyoung/hn@1/build/bundle.js";
   firstScript.parentNode.insertBefore(js, firstScript);
   return true;
 };
 
 var injected = false;
-var embedClasses = [".reddit-card"].join(",");
+var embedClasses = [".hn-card"].join(",");
 
 exports.onRouteUpdate = function () {
   if (document.querySelector(embedClasses) !== null) {
@@ -18,5 +18,7 @@ exports.onRouteUpdate = function () {
       injectScript();
       injected = true;
     }
+  } else {
+    console.log("can not found embedClasses");
   }
 };
