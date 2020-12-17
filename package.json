@@ -1,10 +1,10 @@
 {
-  "name": "gatsby-plugin-reddit",
-  "description": "Loads the reddit JavaScript for embedding reddit's post.",
+  "name": "gatsby-plugin-hn",
+  "description": "Loads the hn JavaScript for embedding hn's post.",
   "version": "0.1.0",
   "author": "Owen Young <theowenyoung@gmail.com>",
   "bugs": {
-    "url": "https://github.com/theowenyoung/gatsby-plugin-reddit/issues"
+    "url": "https://github.com/theowenyoung/gatsby-plugin-hn/issues"
   },
   "dependencies": {
     "@babel/runtime": "^7.8.7"
@@ -15,7 +15,7 @@
     "babel-preset-gatsby-package": "^0.3.1",
     "cross-env": "^5.2.1"
   },
-  "homepage": "https://github.com/theowenyoung/gatsby-plugin-reddit",
+  "homepage": "https://github.com/theowenyoung/gatsby-plugin-hn",
   "keywords": [
     "gatsby",
     "gatsby-plugin"
@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/theowenyoung/gatsby-plugin-reddit"
+    "url": "https://github.com/theowenyoung/gatsby-plugin-hn"
   },
   "scripts": {
     "build": "babel src --out-dir . --ignore **/__tests__",
