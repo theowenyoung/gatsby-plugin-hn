@@ -2,7 +2,7 @@ const injectScript = () => {
   const js = document.createElement(`script`)
   const firstScript = document.getElementsByTagName(`script`)[0]
   js.id = `gatsby-plugin-hn`
-  js.src = `//cdn.jsdelivr.net/gh/theowenyoung/hn@3/build/bundle.js`
+  js.src = `//cdn.jsdelivr.net/gh/theowenyoung/hn@4/build/bundle.js`
   firstScript.parentNode.insertBefore(js, firstScript)
   return true
 }
