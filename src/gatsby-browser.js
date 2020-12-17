@@ -2,7 +2,7 @@ const injectScript = () => {
   const js = document.createElement(`script`)
   const firstScript = document.getElementsByTagName(`script`)[0]
   js.id = `gatsby-plugin-hn`
-  js.src = `//cdn.jsdelivr.net/gh/theowenyoung/hn@2/build/bundle.js`
+  js.src = `//cdn.jsdelivr.net/gh/theowenyoung/hn@3/build/bundle.js`
   firstScript.parentNode.insertBefore(js, firstScript)
   return true
 }
@@ -16,8 +16,13 @@ exports.onRouteUpdate = () => {
     if (!injected) {
       injectScript()
       injected = true
+    }else{
+      if (
+        typeof hnEmbed !== `undefined` &&
+        typeof window.hnEmbed.load === `function`
+      ) {
+        window.hnEmbed.load()
+      }
     }
-  } else {
-    console.log(`can not found embedClasses`)
-  }
+  } 
 }
